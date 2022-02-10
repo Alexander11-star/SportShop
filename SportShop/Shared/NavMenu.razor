@@ -1,0 +1,42 @@
+﻿
+
+<div class="top-row pl-4 navbar navbar-dark">
+    <MudText Align="Align.Center" Color="Color.Info" Typo="Typo.h6" Class="pa-3">Tienda Deportiva</MudText>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <MudIconButton Icon="icon-Usuario02" Color="Color.Inherit" Size="Size.Large" Link="https://github.com/Garderoben/MudBlazor" Target="_blank" />
+        <MudDivider Vertical="true" FlexItem="true" />
+        <span class="navbar-toggler-icon">Logout<MudIcon Icon="@Icons.Material.Filled.Logout" Size="Size.Large" Title="Add" /></span>
+    </button>
+</div>
+
+@*<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="ViewProduct" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Productos
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> Comprar
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+        </li>
+    </ul>
+</div>*@
+
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

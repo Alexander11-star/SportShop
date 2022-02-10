@@ -1,0 +1,356 @@
+﻿:root {
+    /*Estos colores corresponden a los de la paleta corporativa*/
+    --color-orange: #D68500;
+}
+
+/*** [Inicio]: Ajustes en MudButton ***/
+
+/* Se inactiva el uppercase del texto en los botones */
+.mud-button {
+    text-transform: none;
+}
+
+/*** [Fin]: Ajustes en MudButton ***/
+
+
+/*** [Inicio]: Ajustes en MudPaper ***/
+
+/* Se modifica el grosor de la linea del borde */
+.mud-paper-outlined {
+    border: 1px solid var(--mud-palette-lines-default);
+}
+
+/*** [Fin]: Ajustes en MudPaper ***/
+
+
+/*** [Inicio]: Ajustes en MudExpandPanel ***/
+
+/* Se implementa delineado del panel */
+.mud-expand-panel.mud-elevation-0 {
+    box-shadow: 0 0 0 1px var(--mud-palette-lines-default);
+    /*outline: 1.3px solid var(--mud-palette-lines-default);*/
+}
+
+/* Se implementa delineado y radius en el header del panel */
+.mud-expand-panel .mud-expand-panel-header {
+    outline: 1.3px solid var(--mud-palette-primary);
+    color: var(--mud-palette-white);
+    min-height: 32px;
+    padding: 4px 8px 4px 18px;
+    background-color: var(--mud-palette-primary);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+/*** [Fin]: Ajustes en MudExpandPanel ***/
+
+
+/*** [Inicio]: Ajustes en MudDivider ***/
+
+/* Se modifica el grosor de la línea */
+.mud-divider-vertical {
+    width: 1.3px;
+}
+
+/*** [Fin]: Ajustes en MudDivider ***/
+
+/*** [Inicio]: Ajustes en MudDialog para MessageBox ***/
+
+.mud-dialog-messagebox.mud-dialog {
+    --color-messagebox-header: var(--mud-palette-dark-lighten);
+    padding-top: 30px;
+    line-height: inherit;
+    border-top: 5px solid var(--color-messagebox-header);
+}
+
+.mud-dialog-messagebox.mud-dialog-messagebox-confirm.mud-dialog {
+    --color-messagebox-header: var(--mud-palette-primary);
+}
+
+.mud-dialog-messagebox.mud-dialog-messagebox-error.mud-dialog {
+    --color-messagebox-header: var(--mud-palette-error);
+}
+
+.mud-dialog-messagebox.mud-dialog-messagebox-info.mud-dialog {
+    --color-messagebox-header: var(--mud-palette-info);
+}
+
+.mud-dialog-messagebox.mud-dialog-messagebox-warning.mud-dialog {
+    --color-messagebox-header: var(--mud-palette-warning);
+}
+
+.mud-dialog-messagebox.mud-dialog::before {
+    display: block;
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    top: -0.75em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-messagebox-header);
+    color: var(--mud-palette-info-text);
+    border-radius: 50%;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+
+/*** [Fin]: Ajustes en MudDialog para MessageBox ***/
+
+/*[Inicio] Ajustes mensaje Instantaneos*/
+
+.mud-snackbar {
+    box-shadow: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    justify-content: space-between;
+}
+
+.mud-alert-outlined-success {
+    color: var(--mud-palette-primary);
+    border: 1px solid var(--mud-palette-primary);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-warning {
+    color: var(--mud-palette-warning);
+    border: 1px solid var(--mud-palette-warning);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-error {
+    color: var(--mud-palette-error);
+    border: 1px solid var(--mud-palette-error);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-dark {
+    color: var(--mud-palette-dark-darken);
+    border: 1px solid var(--mud-palette-dark);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-info {
+    color: var(--mud-palette-secondary);
+    border: 1px solid var(--mud-palette-secondary);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-primary {
+    color: var(--mud-palette-primary-darken);
+    border: 1px solid var(--mud-palette-primary);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-secondary {
+    color: var(--mud-palette-secondary-darken);
+    border: 1px solid var(--mud-palette-secondary);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-tertiary {
+    color: var(--mud-palette-tertiary-darken);
+    border: 1px solid var(--mud-palette-tertiary);
+    border-right-style: dashed;
+}
+
+.mud-alert-outlined-normal {
+    color: var(--mud-palette-text-primary);
+    border: 1px solid var(--mud-palette-text-primary);
+    border-right-style: dashed;
+}
+
+.mud-snackbar-icon {
+    display: flex;
+    opacity: .9;
+    padding: 0px 0;
+    font-size: 22px;
+
+    margin-inline-end: 0px;
+    margin-inline-start: unset;
+    order: 1;
+    margin-right: -10px !important;
+    width: 40px;
+    height: 40px;
+}
+
+    .mud-snackbar-icon .mud-icon-root {
+        margin: auto;
+    }
+
+.mud-button-root .mud-icon-size-large {
+    font-size: 2.25rem;
+}
+
+.mud-snackbar .mud-snackbar-content-message {
+    width: 90%;
+}
+
+/*Pone el background-color al icono icon-Check*/
+.mud-alert-outlined-success .mud-snackbar-icon {
+    background-color: var(--mud-palette-primary);
+    border-radius: 50%;
+    color: white;
+}
+/*Pone el background-color al icono icon-Info*/
+.mud-alert-outlined-info .mud-snackbar-icon {
+    background-color: var(--mud-palette-secondary);
+    border-radius: 50%;
+    color: white;
+}
+
+/*Pone el background-color al icono icon-Check*/
+.mud-alert-outlined-error .mud-snackbar-icon {
+    background-color: var(--mud-palette-error);
+    border-radius: 50%;
+    color: white;
+}
+/*Pone el background-color al icono icon-Info*/
+.mud-alert-outlined-warning .mud-snackbar-icon {
+    background-color: var(--mud-palette-warning);
+    border-radius: 50%;
+    color: white;
+}
+
+/*[Fin] Ajustes mensaje Instantaneos*/
+
+/**** [Inicio]: Ajustes en MudNavMenu ****/
+
+.mud-navmenu .mud-nav-link-text {
+    margin-left: 10px !important;
+    margin-inline-start: 10px !important;
+    margin-inline-end: 10px !important;
+}
+
+.mud-nav-link {
+    white-space: unset !important;
+}
+
+/**** [Fin]: Ajustes en MudNavMenu ****/
+
+/* [Inicio] Ajustes a MudSwitch con etiquetas Si/No */
+
+.mud-switch-span {
+    width: 63px;
+    padding: 10px;
+}
+
+.mud-switch-base {
+    padding: 8px;
+    margin-left: -1px;
+}
+
+.mud-switch-base.mud-checked {
+    transform: translateX(24px);
+}
+
+.mud-switch-button .mud-switch-thumb {
+    width: 22px;
+    height: 22px;
+}
+
+.mud-switch-span .mud-switch-track {
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    padding: 0 3px 0 5px;
+}
+
+.mud-switch-track::after {
+    font-size: .75rem;
+    font-weight: bold;
+    content: "Si No";
+    color: white;
+    align-self: center;
+}
+
+.mud-switch-span {
+    width: 63px;
+    padding: 10px;
+    order: 2;
+}
+
+.mud-switch p {
+    padding: 10px;
+    order: 1;
+    display: flex;
+}
+
+.mud-switch {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-left: -11px;
+    margin-right: 16px;
+    margin-inline-start: -11px;
+    margin-inline-end: 16px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* [Fin] Ajustes a MudSwitch con etiquetas Si/No */
+
+.mud-tab{
+    text-transform:none;
+}
+
+.mud-tabs-toolbar.mud-paper-outlined {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--mud-palette-lines-default);
+}
+
+.mud-table-cell {
+    text-align: center !important;
+}
+
+.mud-popover {
+    display: none;
+}
+
+.mud-popover.mud-popover-open {
+    display: block;
+}
+
+.mud-tabs-toolbar .mud-tabs-toolbar-content {
+    width: max-content !important;
+}
+
+.mud-tabs-toolbar .mud-tabs-toolbar-content .mud-tabs-toolbar-wrapper {
+    width: max-content !important;
+}
+
+.mud-tabs-toolbar .mud-tabs-toolbar-wrapper:not([style*="translateX(-0px)"]) {
+    transform: translateX(-130px) !important;
+}
+
+.mud-tabs-toolbar .mud-button-root:disabled {
+    pointer-events: unset !important;
+}
+
+.mud-tabs-toolbar .mud-ripple:after {
+    pointer-events: unset !important;
+}
+
+ .mud-tab-fix-width.mud-tab {
+    max-width: 200px;
+}
+
+.mud-dialog-width-xl {
+    max-width: 1420px !important;
+}
+
+.mud-dialog-content-fix-height {
+    overflow-y: scroll;
+    max-height: 550px !important;
+    max-width: 1420px !important;
+}
+
+.mud-main-content-fix-body {
+    padding-left: 124px !important;
+}
+
+.mud-nav-link .mud-icon-root {
+    font-size: 2.25rem;
+}

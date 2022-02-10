@@ -1,0 +1,1257 @@
+@font-face {
+    font-family: 'SCSE_Icons';
+    src: url('../Assets/fonts/scse_icons/SCSE_Icons.eot?skzacb#iefix') format('embedded-opentype'), url('../Assets/fonts/scse_icons/SCSE_Icons.ttf?skzacb') format('truetype'), url('../Assets/fonts/scse_icons/SCSE_Icons.woff?skzacb') format('woff'), url('../Assets/fonts/scse_icons/SCSE_Icons.svg?skzacb#SCSE_Icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'SCSE_Icons', sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-FlechaAbajo:before {
+    content: "\e900";
+}
+
+.icon-Mas:before {
+    content: "\e901";
+}
+
+.icon-Cerrar:before {
+    content: "\e902";
+}
+
+.icon-Check:before {
+    content: "\e903";
+}
+
+.icon-Ayuda:before {
+    content: "\e904";
+}
+
+.icon-Info:before {
+    content: "\e905";
+}
+
+.icon-Admiracion:before {
+    content: "\e906";
+}
+
+.icon-Eliminar:before {
+    content: "\e907";
+}
+
+.icon-AnalisisR:before {
+    content: "\e908";
+}
+
+.icon-AntecedentesM:before {
+    content: "\e909";
+}
+
+.icon-Home:before {
+    content: "\e90a";
+}
+
+.icon-Configura:before {
+    content: "\e90b";
+}
+
+.icon-Usuario01:before {
+    content: "\e90c";
+}
+
+.icon-Salir:before {
+    content: "\e90d";
+}
+
+.icon-Antecedentes:before {
+    content: "\e90e";
+}
+
+.icon-PlanM:before {
+    content: "\e90f";
+}
+
+.icon-Escalas:before {
+    content: "\e910";
+}
+
+.icon-ExamenF:before {
+    content: "\e911";
+}
+
+.icon-RevisionS:before {
+    content: "\e912";
+}
+
+.icon-Buscar:before {
+    content: "\e913";
+}
+
+.icon-Consentimiento:before {
+    content: "\e914";
+}
+
+.icon-AltoCosto:before {
+    content: "\e915";
+}
+
+.icon-Anticoagulante:before {
+    content: "\e916";
+}
+
+.icon-DeControl:before {
+    content: "\e917";
+}
+
+.icon-NoPOS:before {
+    content: "\e918";
+}
+
+.icon-Psicofarmacos:before {
+    content: "\e919";
+}
+
+.icon-Antibiotico:before {
+    content: "\e91a";
+}
+
+.icon-MIPRES:before {
+    content: "\e91b";
+}
+
+.icon-Persona:before {
+    content: "\e91c";
+}
+
+.icon-Prerrogativa:before {
+    content: "\e91d";
+}
+
+.icon-Prioridad:before {
+    content: "\e91e";
+}
+
+.icon-Documento1:before {
+    content: "\e91f";
+}
+
+.icon-ID:before {
+    content: "\e920";
+}
+
+.icon-Imprimir:before {
+    content: "\e921";
+}
+
+.icon-Borrar:before {
+    content: "\e922";
+}
+
+.icon-Documento:before {
+    content: "\e923";
+}
+
+.icon-Mensaje2:before {
+    content: "\e924";
+}
+
+.icon-Mensaje3:before {
+    content: "\e925";
+}
+
+.icon-MediMas:before {
+    content: "\e926";
+}
+
+.icon-Asociados:before {
+    content: "\e927";
+}
+
+.icon-Calendario:before {
+    content: "\e928";
+}
+
+.icon-Detalle01:before {
+    content: "\e929";
+}
+
+.icon-Editar:before {
+    content: "\e92a";
+}
+
+.icon-MasDetalle:before {
+    content: "\e92b";
+}
+
+.icon-Mensaje:before {
+    content: "\e92c";
+}
+
+.icon-Firma:before {
+    content: "\e92d";
+}
+
+.icon-Historico:before {
+    content: "\e92e";
+}
+
+.icon-Materna:before {
+    content: "\e92f";
+}
+
+.icon-Texto:before {
+    content: "\e930";
+}
+
+.icon-Menu:before {
+    content: "\e931";
+}
+
+.icon-Detalle02:before {
+    content: "\e932";
+}
+
+.icon-Usuario02:before {
+    content: "\e933";
+}
+
+.icon-Editar02:before {
+    content: "\e934";
+}
+
+.icon-DocUsuario:before {
+    content: "\e935";
+}
+
+.icon-CambioDocUsuario:before {
+    content: "\e936";
+}
+
+.icon-Especialidad:before {
+    content: "\e937";
+}
+
+.icon-Profesional:before {
+    content: "\e93b";
+}
+
+.icon-UsuarioTablero:before {
+    content: "\e938";
+}
+
+.icon-Preconsulta:before {
+    content: "\e939";
+}
+
+.icon-Guardar:before {
+    content: "\e93a";
+}
+
+.icon-FlechaD:before {
+    content: "\e93c";
+}
+
+.icon-FlechaA:before {
+    content: "\e93d";
+}
+
+.icon-FlechaI:before {
+    content: "\e93e";
+}
+
+.icon-Citas:before {
+    content: "\e93f";
+}
+
+.icon-Administracion:before {
+    content: "\e940";
+}
+
+.icon-Ordenes:before {
+    content: "\e941";
+}
+
+.icon-Refrescar:before {
+    content: "\e942";
+}
+
+.icon-Recurso:before {
+    content: "\e943";
+}
+
+.icon-Generar:before {
+    content: "\e944";
+}
+
+.icon-Reprogramar:before {
+    content: "\e945";
+}
+
+.icon-Generar1:before {
+    content: "\e946";
+}
+
+.icon-Multiagenda:before {
+    content: "\e947";
+}
+
+.icon-Duplicar:before {
+    content: "\e948";
+}
+
+.icon-SalaProcedimientos:before {
+    content: "\e949";
+}
+
+.icon-SalaQuirofano:before {
+    content: "\e94a";
+}
+
+.icon-NovedadAgenda:before {
+    content: "\e94b";
+}
+
+.icon-PendienteAval:before {
+    content: "\e94c";
+}
+
+.icon-NOPBS:before {
+    content: "\e94d";
+}
+
+.icon-X:before {
+    content: "\e94e";
+}
+
+
+.icon-CDias:before {
+    content: "\e94f";
+}
+
+.icon-CMeses:before {
+    content: "\e950";
+}
+
+.icon-Pin:before {
+    content: "\e951";
+}
+
+.icon-CitasGrupales:before {
+    content: "\e952";
+}
+
+.icon-Bloquear:before {
+    content: "\e953";
+}
+
+.icon-PrimeraCita:before {
+    content: "\e954";
+}
+
+.icon-MasInfo:before {
+    content: "\e955";
+}
+
+.icon-MasCitas:before {
+    content: "\e956";
+}
+
+.icon-MasCitasR:before {
+    content: "\e957";
+}
+
+.icon-ConfirmarCita:before {
+    content: "\e958";
+}
+
+.icon-CancelarCita:before {
+    content: "\e959";
+}
+
+.icon-EditarCita:before {
+    content: "\e95a";
+}
+
+.icon-OrdenesMedicas:before {
+    content: "\e95b";
+}
+
+.icon-AsignarCita:before {
+    content: "\e95c";
+}
+
+.icon-SinPaciente:before {
+    content: "\e95d";
+}
+
+.icon-DisponibilidadR:before {
+    content: "\e95e";
+}
+
+.icon-Bloquear1:before {
+    content: "\e95f";
+}
+
+.icon-Desbloquear:before {
+    content: "\e960";
+}
+
+.icon-ConProfesional:before {
+    content: "\e961";
+}
+
+.icon-CitaEspecial:before {
+    content: "\e962";
+}
+
+.icon-AgregarPaciente:before {
+    content: "\e963";
+}
+
+.icon-EditarPaciente:before {
+    content: "\e964";
+}
+
+.icon-UsuarioMasculino:before {
+    content: "\e965";
+}
+
+.icon-UsuarioFemenino:before {
+    content: "\e966";
+}
+
+.icon-Teleconsulta:before {
+    content: "\e967";
+}
+
+.icon-PacienteChat:before {
+    content: "\e968";
+    color: #cbcbcb;
+}
+
+.icon-MedicoChat:before {
+    content: "\e969";
+    color: #cbcbcb;
+}
+
+.icon-AmpliarVideoChat:before {
+    content: "\e96a";
+}
+
+.icon-ReducirVideoChat:before {
+    content: "\e96b";
+}
+
+.icon-VideoChat:before {
+    content: "\e96c";
+}
+
+.icon-SinVideoChat:before {
+    content: "\e96d";
+}
+
+.icon-MicrofonoChat:before {
+    content: "\e96e";
+}
+
+.icon-LlamadaChat:before {
+    content: "\e96f";
+}
+
+.icon-EnviarChat:before {
+    content: "\e970";
+}
+
+.icon-AyudaMenu:before {
+    content: "\e971";
+}
+
+.icon-AccesoriosT:before {
+    content: "\e972";
+}
+
+.icon-Cuidadores:before {
+    content: "\e973";
+}
+
+.icon-Protocolo:before {
+    content: "\e974";
+}
+
+.icon-Toxicidades:before {
+    content: "\e975";
+}
+
+.icon-SinMicrofonoChat:before {
+    content: "\e976";
+}
+
+.icon-AdjuntarChat:before {
+    content: "\e977";
+}
+
+.icon-CheckC:before {
+    content: "\e978";
+}
+
+.icon-Observaciones:before {
+    content: "\e979";
+}
+
+.icon-Incumplir:before {
+    content: "\e97a";
+}
+
+.icon-Enviar:before {
+    content: "\e97b";
+}
+
+.icon-Enviarh:before {
+    content: "\e97c";
+}
+
+.icon-Respuesta:before {
+    content: "\e983";
+}
+
+.icon-RespuestaH:before {
+    content: "\e984";
+}
+
+.icon-Seguimiento:before {
+    content: "\e985";
+}
+
+.icon-SeguimientoH:before {
+    content: "\e986";
+}
+
+.icon-GenerarSol:before {
+    content: "\e987";
+}
+
+.icon-GenerarSolH:before {
+    content: "\e988";
+}
+
+.icon-Alarmas:before {
+    content: "\e989";
+}
+
+.icon-AlarmasH:before {
+    content: "\e98a";
+}
+
+.icon-DetalleH:before {
+    content: "\e98b";
+}
+
+.icon-ObservacionesH:before {
+    content: "\e98c";
+}
+
+.icon-AnularSolicitud:before {
+    content: "\e97e";
+}
+
+.icon-Periodicas:before {
+    content: "\e97d";
+}
+
+.icon-Descargar:before {
+    content: "\e97f";
+}
+
+.icon-Registro:before {
+    content: "\e980";
+}
+
+.icon-RegistroH:before {
+    content: "\e981";
+}
+
+.icon-Autorizacion:before {
+    content: "\e982";
+}
+
+.icon-AutorizacionH:before {
+    content: "\e98d";
+}
+
+.icon-ModificarS:before {
+    content: "\e98e";
+}
+
+.icon-ModificarSH:before {
+    content: "\e98f";
+}
+
+.icon-Enfermeria:before {
+    content: "\e990";
+}
+
+.icon-CitaGrupalInd:before {
+    content: "\e991";
+}
+
+.icon-HSeguimientoPAE:before {
+    content: "\e992";
+}
+
+.icon-SeguimientoPAE:before {
+    content: "\e993";
+}
+
+.icon-MoverCita:before {
+    content: "\e994";
+}
+
+.icon-PegarCita:before {
+    content: "\e995";
+}
+
+.icon-TableroMenu:before {
+    content: "\e996";
+}
+
+.icon-FlechaAbajo:before {
+    content: "\e900";
+}
+
+.icon-Mas:before {
+    content: "\e901";
+}
+
+.icon-Cerrar:before {
+    content: "\e902";
+}
+
+.icon-Check:before {
+    content: "\e903";
+}
+
+.icon-Ayuda:before {
+    content: "\e904";
+}
+
+.icon-Info:before {
+    content: "\e905";
+}
+
+.icon-Admiracion:before {
+    content: "\e906";
+}
+
+.icon-AnalisisR:before {
+    content: "\e908";
+}
+
+.icon-AntecedentesM:before {
+    content: "\e909";
+}
+
+.icon-Home:before {
+    content: "\e90a";
+}
+
+.icon-Configura:before {
+    content: "\e90b";
+}
+
+.icon-Usuario01:before {
+    content: "\e90c";
+}
+
+.icon-Salir:before {
+    content: "\e90d";
+}
+
+.icon-Antecedentes:before {
+    content: "\e90e";
+}
+
+.icon-PlanM:before {
+    content: "\e90f";
+}
+
+.icon-Escalas:before {
+    content: "\e910";
+}
+
+.icon-ExamenF:before {
+    content: "\e911";
+}
+
+.icon-RevisionS:before {
+    content: "\e912";
+}
+
+.icon-Buscar:before {
+    content: "\e913";
+}
+
+.icon-Consentimiento:before {
+    content: "\e914";
+}
+
+.icon-AltoCosto:before {
+    content: "\e915";
+}
+
+.icon-Anticoagulante:before {
+    content: "\e916";
+}
+
+.icon-DeControl:before {
+    content: "\e917";
+}
+
+.icon-NoPOS:before {
+    content: "\e918";
+}
+
+.icon-Psicofarmacos:before {
+    content: "\e919";
+}
+
+.icon-Antibiotico:before {
+    content: "\e91a";
+}
+
+.icon-MIPRES:before {
+    content: "\e91b";
+}
+
+.icon-Persona:before {
+    content: "\e91c";
+}
+
+.icon-Prerrogativa:before {
+    content: "\e91d";
+}
+
+.icon-Prioridad:before {
+    content: "\e91e";
+}
+
+.icon-Documento1:before {
+    content: "\e91f";
+}
+
+.icon-ID:before {
+    content: "\e920";
+}
+
+.icon-Imprimir:before {
+    content: "\e921";
+}
+
+.icon-Borrar:before {
+    content: "\e922";
+}
+
+.icon-Documento:before {
+    content: "\e923";
+}
+
+.icon-Mensaje2:before {
+    content: "\e924";
+}
+
+.icon-Mensaje3:before {
+    content: "\e925";
+}
+
+.icon-MediMas:before {
+    content: "\e926";
+}
+
+.icon-Asociados:before {
+    content: "\e927";
+}
+
+.icon-Calendario:before {
+    content: "\e928";
+}
+
+.icon-Detalle01:before {
+    content: "\e929";
+}
+
+.icon-Editar:before {
+    content: "\e92a";
+}
+
+.icon-MasDetalle:before {
+    content: "\e92b";
+}
+
+.icon-Mensaje:before {
+    content: "\e92c";
+}
+
+.icon-Firma:before {
+    content: "\e92d";
+}
+
+.icon-Historico:before {
+    content: "\e92e";
+}
+
+.icon-Materna:before {
+    content: "\e92f";
+}
+
+.icon-Texto:before {
+    content: "\e930";
+}
+
+.icon-Menu:before {
+    content: "\e931";
+}
+
+.icon-Detalle02:before {
+    content: "\e932";
+}
+
+.icon-Usuario02:before {
+    content: "\e933";
+}
+
+.icon-Eliminar:before {
+    content: "\e907";
+}
+
+.icon-Editar02:before {
+    content: "\e934";
+}
+
+.icon-DocUsuario:before {
+    content: "\e935";
+}
+
+.icon-CambioDocUsuario:before {
+    content: "\e936";
+}
+
+.icon-Especialidad:before {
+    content: "\e937";
+}
+
+.icon-Profesional:before {
+    content: "\e93b";
+}
+
+.icon-UsuarioTablero:before {
+    content: "\e938";
+}
+
+.icon-Preconsulta:before {
+    content: "\e939";
+}
+
+.icon-Guardar:before {
+    content: "\e93a";
+}
+
+.icon-FlechaD:before {
+    content: "\e93c";
+}
+
+.icon-FlechaA:before {
+    content: "\e93d";
+}
+
+.icon-FlechaI:before {
+    content: "\e93e";
+}
+
+.icon-Citas:before {
+    content: "\e93f";
+}
+
+.icon-Administracion:before {
+    content: "\e940";
+}
+
+.icon-Ordenes:before {
+    content: "\e941";
+}
+
+.icon-Refrescar:before {
+    content: "\e942";
+}
+
+.icon-Recurso:before {
+    content: "\e943";
+}
+
+.icon-Generar:before {
+    content: "\e944";
+}
+
+.icon-Reprogramar:before {
+    content: "\e945";
+}
+
+.icon-Generar1:before {
+    content: "\e946";
+}
+
+.icon-Multiagenda:before {
+    content: "\e947";
+}
+
+.icon-Duplicar:before {
+    content: "\e948";
+}
+
+.icon-SalaProcedimientos:before {
+    content: "\e949";
+}
+
+.icon-SalaQuirofano:before {
+    content: "\e94a";
+}
+
+.icon-NovedadAgenda:before {
+    content: "\e94b";
+}
+
+.icon-PendienteAval:before {
+    content: "\e94c";
+}
+
+.icon-NOPBS:before {
+    content: "\e94d";
+}
+
+.icon-AgregarPaciente:before {
+    content: "\e963";
+}
+
+.icon-X:before {
+    content: "\e94e";
+}
+
+.icon-CDias:before {
+    content: "\e94f";
+}
+
+.icon-CMeses:before {
+    content: "\e950";
+}
+
+.icon-Pin:before {
+    content: "\e951";
+}
+
+.icon-CitasGrupales:before {
+    content: "\e952";
+}
+
+.icon-Bloquear:before {
+    content: "\e953";
+}
+
+.icon-PrimeraCita:before {
+    content: "\e954";
+}
+
+.icon-MasInfo:before {
+    content: "\e955";
+}
+
+.icon-MasCitas:before {
+    content: "\e956";
+}
+
+.icon-MasCitasR:before {
+    content: "\e957";
+}
+
+.icon-ConfirmarCita:before {
+    content: "\e958";
+}
+
+.icon-CancelarCita:before {
+    content: "\e959";
+}
+
+.icon-EditarCita:before {
+    content: "\e95a";
+}
+
+.icon-OrdenesMedicas:before {
+    content: "\e95b";
+}
+
+.icon-AsignarCita:before {
+    content: "\e95c";
+}
+
+.icon-SinPaciente:before {
+    content: "\e95d";
+}
+
+.icon-DisponibilidadR:before {
+    content: "\e95e";
+}
+
+.icon-Bloquear1:before {
+    content: "\e95f";
+}
+
+.icon-Desbloquear:before {
+    content: "\e960";
+}
+
+.icon-ConProfesional:before {
+    content: "\e961";
+}
+
+.icon-CitaEspecial:before {
+    content: "\e962";
+}
+
+.icon-EditarPaciente:before {
+    content: "\e964";
+}
+
+.icon-UsuarioMasculino:before {
+    content: "\e965";
+}
+
+.icon-UsuarioFemenino:before {
+    content: "\e966";
+}
+
+.icon-Teleconsulta:before {
+    content: "\e967";
+}
+
+.icon-PacienteChat:before {
+    content: "\e968";
+    color: #cbcbcb;
+}
+
+.icon-MedicoChat:before {
+    content: "\e969";
+    color: #cbcbcb;
+}
+
+.icon-AmpliarVideoChat:before {
+    content: "\e96a";
+}
+
+.icon-ReducirVideoChat:before {
+    content: "\e96b";
+}
+
+.icon-VideoChat:before {
+    content: "\e96c";
+}
+
+.icon-SinVideoChat:before {
+    content: "\e96d";
+}
+
+.icon-MicrofonoChat:before {
+    content: "\e96e";
+}
+
+.icon-LlamadaChat:before {
+    content: "\e96f";
+}
+
+.icon-EnviarChat:before {
+    content: "\e970";
+}
+
+.icon-AyudaMenu:before {
+    content: "\e971";
+}
+
+.icon-AccesoriosT:before {
+    content: "\e972";
+}
+
+.icon-Cuidadores:before {
+    content: "\e973";
+}
+
+.icon-Protocolo:before {
+    content: "\e974";
+}
+
+.icon-Toxicidades:before {
+    content: "\e975";
+}
+
+.icon-SinMicrofonoChat:before {
+    content: "\e976";
+}
+
+.icon-AdjuntarChat:before {
+    content: "\e977";
+}
+
+.icon-CheckC:before {
+    content: "\e978";
+}
+
+.icon-Observaciones:before {
+    content: "\e979";
+}
+
+.icon-Incumplir:before {
+    content: "\e97a";
+}
+
+.icon-Enviar:before {
+    content: "\e97b";
+}
+
+.icon-Enviarh:before {
+    content: "\e97c";
+}
+
+.icon-Respuesta:before {
+    content: "\e983";
+}
+
+.icon-RespuestaH:before {
+    content: "\e984";
+}
+
+.icon-Seguimiento:before {
+    content: "\e985";
+}
+
+.icon-SeguimientoH:before {
+    content: "\e986";
+}
+
+.icon-GenerarSol:before {
+    content: "\e987";
+    color: #cacaca;
+}
+
+.icon-GenerarSolH:before {
+    content: "\e988";
+    color: #cacaca;
+}
+
+.icon-Alarmas:before {
+    content: "\e989";
+}
+
+.icon-AlarmasH:before {
+    content: "\e98a";
+}
+
+.icon-DetalleH:before {
+    content: "\e98b";
+    color: #cacaca;
+}
+
+.icon-ObservacionesH:before {
+    content: "\e98c";
+}
+
+.icon-AnularSolicitud:before {
+    content: "\e97e";
+    color: #cacaca;
+}
+
+.icon-Periodicas:before {
+    content: "\e97d";
+}
+
+.icon-Descargar:before {
+    content: "\e97f";
+    color: #cacaca;
+}
+
+.icon-Registro:before {
+    content: "\e980";
+}
+
+.icon-RegistroH:before {
+    content: "\e981";
+}
+
+.icon-Autorizacion:before {
+    content: "\e982";
+}
+
+.icon-AutorizacionH:before {
+    content: "\e98d";
+}
+
+.icon-ModificarS:before {
+    content: "\e98e";
+}
+
+.icon-ModificarSH:before {
+    content: "\e98f";
+}
+
+.icon-Enfermeria:before {
+    content: "\e990";
+}
+
+.icon-CitaGrupalInd:before {
+    content: "\e991";
+}
+
+.icon-HSeguimientoPAE:before {
+    content: "\e992";
+}
+
+.icon-SeguimientoPAE:before {
+    content: "\e993";
+}
+
+.icon-MoverCita:before {
+    content: "\e994";
+}
+
+.icon-PegarCita:before {
+    content: "\e995";
+}
+
+.icon-TableroMenu:before {
+    content: "\e996";
+}
+
+.icon-FirmaDispositivo:before {
+    content: "\e997";
+}
+
+.icon-FirmaManual:before {
+    content: "\e998";
+}
+
+.icon-Costos:before {
+    content: "\e999";
+}
+
+.icon-InformesCostos:before {
+    content: "\e99a";
+}
+
+.icon-Importar:before {
+    content: "\e99b";
+}

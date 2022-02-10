@@ -1,0 +1,37 @@
+﻿@inherits LayoutComponentBase
+@using SportShop.Common.Application;
+@using SportShop.Common.Application.MasterShop.Stores;  
+
+<div class="page">
+    <div class="sidebar">
+            <NavMenu />       
+    </div>
+    <div class="main">
+        <div class="top-row px-4">
+            <a href="https://localhost:44301/" target="_blank">Logout <MudIcon Icon="@Icons.Material.Filled.Logout" Size="Size.Small" Title="Add" /></a>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>
+
+@code{
+    /// <summary>
+    /// modelo
+    /// </summary>
+    [Parameter]
+    public SportShopViewModel viewModel { get; set; }
+    /// <summary>
+    /// Store
+    /// </summary>
+    [Inject] ISportShop SportShop { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        viewModel = new SportShopViewModel(SportShop);
+
+    }
+}

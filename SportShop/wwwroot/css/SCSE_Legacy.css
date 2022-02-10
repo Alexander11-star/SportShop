@@ -1,0 +1,624 @@
+﻿
+/*PROPIO DE MASTERS*/
+.body-content {
+    padding: 0 0 5px 0.5px;
+    width: 95%;
+    padding-top: 4%;
+}
+
+* {
+    font-family: 'Gotham Book', sans-serif !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.subMenu {
+    height: auto !important;
+    min-height: 3.7em;
+    border-radius: 0 16px 0px 0;
+    width: 11.25rem;
+    left: 12.8em;
+}
+
+.textEllipsis {
+    width: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.TextSmall {
+    font-size: small;
+}
+
+.TextxSmall {
+    font-size: x-small;
+}
+
+.mud-table-head {
+    background-color: #e8e8e8;
+}
+
+.container-fluid {
+    height: 96%;
+    padding-right: 0;
+    padding-top: 1em;
+}
+
+.top-navbar-widthFixed {
+    width: 87% !important;
+    transition: all 0.3s;
+}
+
+:root {
+    --SecondaryLightColor: #d9f1fa;
+    --AvailableAppointmentColor: $controlColor;
+    --ExpiredAppointmentColor: $controlColor;
+    --FirstTimeAppointmentColor: $controlColor;
+    --ControlAppointmentColor: $controlColor;
+}
+
+.SCSE_TitleSection {
+    color: #ffffff;
+    position: absolute;
+    left: 1em;
+    font-size: 16px;
+    font-weight: 600;
+    vertical-align: middle !important;
+    margin-top: 1em !important;
+}
+
+.SCSE_Input select {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    height: 24px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--BordersColor);
+    border-radius: 0;
+    color: var(--TypoColor);
+    transition: all 0.15s ease;
+    /*background: none;*/
+    background: url(../Assets/imgs/expand.png) no-repeat right;
+    background-size: 15px;
+    background-position-y: 90%;
+    margin-top: 24px;
+    padding-right: 1.5em !important;
+}
+
+.SCSE_RoundButton.SCSE_RoundButton_md {
+    float: unset !important;
+}
+
+.subMenu .subMenuList .subMenuList_item .subMenuList_link {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    color: #4d4d4d !important;
+}
+
+.SCSE_Modal::before {
+    z-index: 1;
+    background-color: var(--AcceptColor);
+    border-radius: 50%;
+    color: var(--TypoSecondColor);
+    font-size: 45px;
+    text-align: center;
+    width: 1.5em;
+    margin-bottom: 1.5em;
+    position: absolute;
+    top: -0.7em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a.icon_Editar {
+    text-decoration: none;
+    padding: 3px !important;
+    top: 7px !important;
+    position: relative;
+}
+
+.top-navbar {
+    background-color: var(--PrimaryColor);
+    /*border-left: solid 2px white;*/
+    color: white;
+    position: fixed;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+li {
+    border-bottom: solid 2px transparent;
+}
+
+.userInfoContainer {
+    max-width: 15rem;
+    background-color: var(--PrimaryColor);
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    grid-template-rows: 20px 20px;
+    border-left: solid 0.5px white;
+    padding: 2px 1rem 2px 1rem;
+    color: var(--TypoSecondColor);
+}
+
+.label {
+    width: 9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.userInfoContainer img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.SCSE_RoundButton.SCSE_RoundButton_sm {
+    align-self: inherit;
+}
+
+.alert {
+    background-color: white;
+    border: solid 2px;
+    border-radius: 12px;
+    color: var(--TypoColor);
+    padding: 10px 30px 10px 13px;
+    margin-right: 3em !important;
+    min-height: 5.1em;
+    height: auto;
+}
+
+.alert-success {
+    border-color: var(--AcceptColor);
+}
+
+
+.alert-error {
+    border-color: var(--CancelColor);
+}
+
+.alert-danger {
+    border-color: var(--CancelColor);
+}
+
+.year-label {
+    color: var(--PrimaryColor);
+    font-family: 'Gotham Bold' ,serif;
+    font-size: 38px;
+}
+
+.modal-lg {
+    margin-top: 10%;
+}
+
+.fillScreen {
+    height: 88%;
+}
+
+/* Modificacion Clases para calendario */
+
+.monthName {
+    border-bottom: 1px solid var(--BordersColor) !important;
+    font-size: 16px !important;
+}
+
+.noUserSelect {
+    font-size: 10px !important;
+}
+
+.calendarDay {
+    font-size: 13px !important;
+}
+
+.monthCalendarTable {
+    width: 85% !important;
+}
+
+.fullCalendarHeader {
+    padding-bottom: 1rem;
+}
+
+.fullCalendarContainer {
+    margin-bottom: 1.5rem;
+}
+
+/* Modificacion Clases para encabezado calendario */
+
+.labelButton {
+    padding-bottom: 0.2rem !important;
+}
+
+.NoPaddingLeft {
+    padding-left: 0px
+}
+
+.ButtonLabel {
+    margin-left: 0.8em !important;
+}
+
+.NewBtnTable {
+    position: absolute;
+    top: 2.7em;
+    z-index: 1;
+}
+
+.SCSE_GeneralCard {
+    padding-top: 3.5em !important;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.loading {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+}
+
+
+.loadingCache {
+    position: absolute;
+    top: 6%;
+    left: 15%
+}
+
+.loadingPartial {
+    height: 117%;
+    width: 108.8%;
+    top: -12%;
+    left: -6.5%;
+}
+
+.NewRegisterLabel {
+    color: var(--AcceptColor) !important;
+    font-weight: 600;
+    margin-left: 10px !important;
+    margin-bottom: 1em !important;
+    padding-top: 1em;
+    font-size: 15px
+}
+
+.NewRegisterContainer {
+    margin-bottom: 2em;
+    padding: 2em;
+    padding-top: 1em !important;
+    padding-bottom: 0.8em;
+    border: 1px solid var(--AcceptColor);
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 12px;
+    position: relative;
+}
+
+.NewRegisterButtonContainer {
+    text-align: end;
+    padding-right: 0;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 1.2em;
+    right: 2em;
+}
+
+.ReviewRegisterContainer {
+    border-radius: 0 12px 12px 12px;
+    margin-bottom: 1.35em;
+    padding-bottom: 0.4em;
+    padding-top: 2.5em !important;
+    margin-top: 2.1em !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.subTitle {
+    font-weight: 600;
+    margin-right: 0.5em;
+}
+
+
+
+.subTitle {
+    font-weight: 600;
+    margin-right: 0.5em;
+}
+
+.labelCode {
+    line-height: 1em;
+    margin-top: -1.2%;
+}
+
+.UpdateContainer {
+    padding-top: 0.8em !important;
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+.SwitchContainer {
+    margin-top: 2em;
+}
+
+.RegisterButton {
+    position: absolute;
+    right: 1em;
+    bottom: 0.8em;
+}
+
+.GoBackButton {
+    color: var(--PrimaryColor);
+    position: absolute;
+    height: 1.8em;
+    width: auto;
+    padding: 0 1em;
+    padding-left: 2em;
+    top: -1px;
+    right: 6em;
+    border-radius: 0 0 12px 12px;
+    font-weight: bold;
+    border-color: var(--BordersColor);
+    border: 1px solid var(--BordersColor);
+    box-shadow: none;
+    outline: none;
+}
+
+
+.zFixed {
+    z-index: -1 !important;
+}
+
+.border {
+    border: none !important;
+}
+
+
+input.datepicker-here {
+    font-size: 14px !important;
+}
+
+.TimeInput {
+    cursor: pointer;
+}
+
+.tagify:not(.tagify--mix) .tagify__input {
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 0;
+    margin-right: 3.5em;
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.tagify--outside {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.customTagify .tagify {
+    margin-top: -0.5em !important;
+    border: none !important;
+}
+
+.tagify__tag > div {
+    color: white !important;
+    background-color: var(--AcceptColor) !important;
+}
+
+.tagify__tag__removeBtn {
+    color: white;
+}
+
+.tagify__tag > div::before {
+    color: white !important;
+    background-color: var(--AcceptColor) !important;
+    box-shadow: var(--AcceptColor) !important;
+}
+
+.tagify__input--outside {
+    display: block;
+    max-width: 600px;
+    border-bottom: 1px solid var(--BordersColor);
+    margin-top: 2.35em !important;
+    margin-bottom: 0em !important;
+}
+
+.tagInputPositionFixed {
+    margin-top: -1.1em !important;
+}
+
+.tagifyBlockTransformselect {
+    transition: none !important;
+    transform: none !important;
+}
+
+.agendatypeLabel {
+    width: 4em;
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+.dataTables_length {
+    text-align: right;
+}
+
+.clockicon {
+    padding-right: 22px !important;
+    background: transparent url(../Assets/imgs/Reloj_Reloj.png) right no-repeat !important;
+    background-position: right 90% !important;
+    background-size: 22px !important;
+}
+
+.IconButton {
+    cursor: pointer;
+    color: var(--ComplementColor);
+    font-size: 2.5rem;
+}
+
+.DetailIconButton {
+    color: var(--ComplementColor);
+    font-size: 2.5rem;
+    position: absolute;
+    top: -50%;
+    left: 39%;
+}
+
+.selected {
+    color: var(--ComplementColor) !important;
+}
+
+.TimeWatermark::selection {
+    background: white;
+    color: var(--BordersColor);
+}
+
+.TimeWatermark::-webkit-input-placeholder {
+    color: var(--BordersColor);
+}
+
+.tagify__input::after {
+    color: transparent !important;
+}
+
+
+.scse-banner {
+    background-color: var(--PrimaryColor);
+    min-height: 55px;
+    border-left: 1px solid white;
+    color: #FFFFFF;
+}
+
+    .scse-banner .service {
+        padding-top: 1.8%;
+    }
+
+    .scse-banner .header-user {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 0 0 0;
+    }
+
+        .scse-banner .header-user .icon-UsuarioTablero {
+            font-size: 50px;
+        }
+
+            .scse-banner .header-user .icon-UsuarioTablero::before {
+                color: #FFFFFF;
+                margin: 0 10px;
+            }
+
+        .scse-banner .header-user::before {
+            content: "";
+            height: 75%;
+            width: 1px;
+            background-color: #FFFFFF;
+        }
+
+        .scse-banner .header-user .flex-column .user-name + span,
+        .scse-banner .header-user .flex-column .user-name {
+            padding: px 0;
+        }
+
+        .scse-banner .header-user .flex-column .user-name {
+            font-weight: bold;
+        }
+
+.navbar {
+    align-items: initial;
+}
+
+.container-fluid {
+    height: 96%;
+    padding-right: 0;
+    padding-top: 1em;
+}
+
+.top-navbar {
+    background-color: var(--PrimaryColor);
+    color: white;
+    position: fixed;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.datepicker {
+    z-index: 1051 !important;
+}
+
+/* Calendar Styles */
+
+.custome-calendar .datepicker-inline {
+    left: auto;
+    right: auto;
+}
+
+.custome-calendar .datepicker {
+    font-size: 14px;
+    width: auto;
+    border-color: transparent !important;
+    min-width: 210px;
+}
+
+.custome-calendar .datepicker--cell {
+    height: 22px;
+}
+
+.custome-calendar .datepicker--nav-title {
+    font-size: 17px;
+    color: var(--SecondaryColor) !important;
+}
+
+
+.custome-calendar .-focus- {
+    background-color: #E8F8FF !important;
+}
+
+.custome-calendar .-disabled- {
+    background-color: transparent !important;
+    cursor: not-allowed !important;
+}
+
+.custome-calendar .-selected- {
+    background-color: var(--SecondaryColor) !important;
+    color: aliceblue;
+}
+
+.custome-calendar .datepicker--day-name {
+    color: var(--secondary);
+}
+
+.-current-week- {
+    background: red;
+}
+
+#collapseFilters {
+    cursor: pointer;
+}
+
+.scse-labelAlert {
+    font-size: 59%;
+    color: var(--WarningColor);
+    position: absolute;
+    left: 0;
+    top: 86%;
+}
+
+.alertLabel {
+    color: var(--PrimaryColor);
+}
+
+.notifyAlert {
+    cursor: pointer !important;
+}

@@ -1,0 +1,43 @@
+﻿@using SportShop.Model.Common;
+
+@page "/ViewProduct"
+
+<MudGrid>
+    @if (viewModel.ObjectsSales != null && viewModel.ObjectsSales.Count > 0)
+    {
+    <MudItem xs="12">
+        <MudItem xs="12" Class="justify-center pa-4">
+            <MudText Align="Align.Center" Color="Color.Info">VENTAS TOTALES POR PRODUCTO</MudText>
+        </MudItem>
+        <MudPaper Class=" align-center justify-center mud-width-full py-8 px-12">
+            <MudItem Class="justify-center row">
+                <MudTable Elevation="0" @ref="table" Loading="@tableLoading" ServerData="@(new Func<TableState, Task<TableData<Sales>>>(ServerReload))" Items="@viewModel.ObjectsSalesGroup" Dense="true" Hover="true" Bordered="false" Striped="true" RowsPerPage="5">
+                    <ToolBarContent>
+                        <MudIconButton Size="Size.Large" Color="Color.Info" Title="Agregar Producto" Class="SCSE_RoundButton SCSE_RoundButton_md accept icon-Mas" OnClick="@(s=>AddRegister())"/>
+                        <MudSpacer />
+                        <MudTextField Immediate="true" T="string" Placeholder="buscar" Adornment="Adornment.End" ValueChanged="@(s=>OnSearch(s))" AdornmentIcon="icon-Buscar" IconSize="Size.Medium" Class="mt-0 mb-3"></MudTextField>
+                        <MudSpacer />
+                    </ToolBarContent>
+                    <HeaderContent>
+                        <MudTh>Detalle</MudTh>
+                        <MudTh><MudTableSortLabel SortLabel="so_NameProduct" T="Sales">Producto</MudTableSortLabel></MudTh>
+                        <MudTh><MudTableSortLabel SortLabel="cco_DescriptionSProduct" T="Sales">Descripción</MudTableSortLabel></MudTh>
+                        <MudTh><MudTableSortLabel SortLabel="cco_QuantityProduct" T="Sales">Cantidad Total</MudTableSortLabel></MudTh>
+                        <MudTh><MudTableSortLabel SortLabel="cco_CostProduct" T="Sales">Costo Total Vendido</MudTableSortLabel></MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd DataLabel="Detalle"><MudIconButton Size="Size.Medium" Color="Color.Info" Class="accept" Disabled="@_processing" Icon="icon-Detalle02" Title="Detalle" /></MudTd>
+                        <MudTd DataLabel="Producto">@context.NameSProduct</MudTd>
+                        <MudTd DataLabel="Descripcion">@context.DescriptionSProduct</MudTd>
+                        <MudTd DataLabel="Costo">@context.Quantity</MudTd>
+                        <MudTd DataLabel="Costo">@context.CostSProduct</MudTd>
+                    </RowTemplate>
+                    <PagerContent>
+                        <MudTablePager PageSizeOptions="new int[]{2,5,10,50, 100}" />
+                    </PagerContent>
+                </MudTable>
+            </MudItem>
+        </MudPaper>
+    </MudItem>
+    }
+</MudGrid>

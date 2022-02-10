@@ -1,0 +1,304 @@
+﻿@using SportShop.Common.Application;
+@using SportShop.Model.Common;
+@using SportShop.Common.Application.MasterShop.Stores;
+@using Microsoft.AspNetCore.Hosting;
+@using System.IO;
+
+<MudDialog Class="modal-content SCSE_Modal confirm icon-Mas">
+    <DialogContent>
+        <MudContainer Class="mud-width-full mud-dialog-content-fix-height">
+            <MudGrid>
+                <MudItem xs="12" Class="justify-center">
+                    <MudText Align="Align.Center" Color="Color.Info" Typo="Typo.h6">Crear Productos</MudText>
+                </MudItem>
+                <MudItem xs="12" Class="justify-center">
+                    <MudPaper Elevation="2" Style="border-color:dodgerblue">
+                        <MudItem xs="12" Class="justify-center pa-4">
+                            <MudText Align="Align.Center" Color="Color.Info"></MudText>
+                        </MudItem>
+                        <MudGrid>
+                            <MudItem xs="2" sm="2" md="2" Class="pl-5">
+                                <MudTextField @bind-Value="@SportShopViewModel.ObjectsProducts.CodProduct" Label="* Codigo" Variant="Variant.Text" MaxLength="3"></MudTextField>
+                            </MudItem>
+                            <MudItem xs="3" sm="3" md="3">
+                                <MudTextField @bind-Value="@SportShopViewModel.ObjectsProducts.NameProduct" Label="* Nombre" Variant="Variant.Text" MaxLength="50"></MudTextField>
+                            </MudItem>
+                            <MudItem xs="3" sm="3" md="3">
+                                <MudTextField @bind-Value="@SportShopViewModel.ObjectsProducts.DescriptionProduct" Label="* Descripción" Variant="Variant.Text" MaxLength="50"></MudTextField>
+                            </MudItem>
+                            <MudItem xs="2" sm="2" md="2">
+                                <MudTextField @bind-Value="@SportShopViewModel.ObjectsProducts.CostProduct" Label="* Precio" Variant="Variant.Text" MaxLength="3"></MudTextField>
+                            </MudItem>
+                            <MudItem xs="2" sm="2" md="2">
+                                <InputFile id="fileInput" OnChange="UploadFiles" hidden multiple />
+                                <MudIconButton Size="Size.Large" HtmlTag="label" for="fileInput" Color="Color.Info" Class="SCSE_RoundButtonAcceptColor accept" Icon="icon-Importar" Title="Importar" />
+                            </MudItem>
+                        </MudGrid>
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="12" Class="justify-center">
+                    <MudText Align="Align.Center" Color="Color.Info">Listado de productos</MudText>
+                </MudItem>
+                <MudItem xs="12" Class="justify-center">
+                    <MudTable Class="justify-center col-md-12" @ref="table" Loading="@tableLoading" Dense="true" ServerData="@(new Func<TableState, Task<TableData<Products>>>(ServerReload))" Items="@SportShopViewModel.ListProducts" Hover="true" Bordered="false" Striped="true" RowsPerPage="5">
+                        <ToolBarContent>
+                            <MudSpacer />
+                            <MudSpacer />
+                            <MudTextField Immediate="true" T="string" Placeholder="buscar" Adornment="Adornment.End" ValueChanged="@(s=>OnSearch(s))" AdornmentIcon="icon-Buscar" IconSize="Size.Medium" Class="mt-0 "></MudTextField>
+                            <MudSpacer />
+                        </ToolBarContent>
+                        <HeaderContent>
+                            <MudTh><MudTableSortLabel SortLabel="so_NameProduct" T="Products">Producto</MudTableSortLabel></MudTh>
+                            <MudTh><MudTableSortLabel SortLabel="cco_DescriptionSProduct" T="Products">Descripción</MudTableSortLabel></MudTh>
+                            <MudTh><MudTableSortLabel SortLabel="cco_QuantityProduct" T="Products">Costo</MudTableSortLabel></MudTh>
+                            <MudTh>Image</MudTh>
+                            <MudTh>Eliminar</MudTh>
+                        </HeaderContent>
+                        <RowTemplate>
+                            <MudTd DataLabel="Nr">@context.CodProduct - @context.NameProduct</MudTd>
+                            <MudTd DataLabel="Sign">@context.DescriptionProduct</MudTd>
+                            <MudTd DataLabel="Sign">@context.CostProduct</MudTd>
+                            <MudTd DataLabel="Sign">@context.ImageProduct</MudTd>
+                            <MudTd DataLabel="Eliminar"> <MudIconButton Size="Size.Medium" Color="Color.Info" Class="accept iconDeleteColor" Icon="icon-Eliminar" Disabled="@_processing" OnClick="(e => ButtonDeleteClicked(context.IdProduct))" Title="Eliminar" /></MudTd>
+                        </RowTemplate>
+                        <PagerContent>
+                            <MudTablePager PageSizeOptions="new int[]{5,10,50, 100}" />
+                        </PagerContent>
+                    </MudTable>
+                </MudItem>
+            </MudGrid>
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudIconButton Size="Size.Large" Color="Color.Info" Disabled="@_processing" Icon="icon-Cerrar" Title="Cancelar" Class="SCSE_RoundButton SCSE_RoundButton_md cancel" @onclick="Cancel" />
+        @if (_processing)
+        {
+            <MudProgressCircular Color="Color.Primary" Size="Size.Small" Indeterminate="true" />
+        }
+        else
+        {
+            <MudIconButton Size="Size.Large" Disabled="@_processing" Color="Color.Info" Icon="icon-Guardar" Title="Guardar" Class="SCSE_RoundButton SCSE_RoundButton_md accept" @onclick="SaveAsync" />
+
+        }
+    </DialogActions>
+</MudDialog>
+
+@code {
+    /// <summary>
+    /// cantidad items
+    /// </summary>
+    private int totalItems;
+    /// <summary>
+    /// reload table
+    /// </summary>
+    public bool tableLoading { get; set; }
+    /// <summary>
+    /// Table
+    /// </summary>
+    private MudTable<Products> table;
+    /// <summary>
+    /// vaiable upload
+    /// </summary>
+    private bool _processing = false;
+    /// <summary>
+    /// filtro tablas
+    /// </summary>
+    public string searchString { get; set; }
+    /// <summary>
+    /// paginacion periodos inductor
+    /// </summary>
+    private IEnumerable<Products> pagedData;
+    /// <summary>
+    /// WebHostEnvironment
+    /// </summary>
+    [Inject]
+    public IWebHostEnvironment WebHostEnvironment { get; set; }
+    /// <summary>
+    /// DIalog
+    /// </summary>
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    /// <summary>
+    /// Servicio para llamar cajas de dialogo
+    /// </summary>
+    [Inject] IDialogService DialogService { get; set; }
+    /// <summary>
+    /// Snackbar
+    /// </summary>
+    [Inject] ISnackbar Snackbar { get; set; }
+    /// <summary>
+    /// Store
+    /// </summary>
+    [Inject] ISportShop SportShop { get; set; }
+    /// <summary>
+    /// modelo
+    /// </summary>
+    [Parameter]
+    public SportShopViewModel SportShopViewModel { get; set; }
+    /// <summary>
+    /// propedad para validad los campos vacios
+    /// </summary>
+    public bool ValidateSaveSales { get; set; } = true;
+    /// <summary>
+    /// Cierra el formulario sin accion
+    /// </summary>
+    public void Cancel()
+    {
+        ///Limpiar los valores
+        SportShopViewModel.ClearSelectedValues();
+
+        MudDialog.Close(DialogResult.Cancel());
+    }
+
+    /// <summary>
+    /// Carga de Archivo
+    /// </summary>
+    private async Task UploadFiles(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles())
+        {
+            try
+            {
+                var filePath = Path.Combine(WebHostEnvironment.WebRootPath, "Upload", file.Name);
+                using (var ms = file.OpenReadStream())
+                {
+                    //using (Stream destination = File.Create(filePath))
+                    //{
+                    //    await ms.CopyToAsync(destination);
+                    //}
+                }
+                SportShopViewModel.ImportFile(filePath);
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Guarda relacion de Centro de Costos
+    /// </summary>
+    /// <returns></returns>
+    public async Task SaveAsync()
+    {
+        ///Realiza validacion de campos vacios
+        ValidateSave();
+
+        if (ValidateSaveSales)
+        {
+            await Processing(true);
+            await SportShopViewModel.SaveProducts();
+            ValidatemessageSave();
+            //limpia valores
+            SportShopViewModel.ClearSelectedValues();
+            await table.ReloadServerData();
+            await Processing(false);
+            StateHasChanged();
+        }
+    }
+
+
+    /// <summary>
+    /// Valida el mensaje de confirmacion cuando se guarda o edita un registro
+    /// </summary>
+    public void ValidatemessageSave()
+    {
+        Snackbar.Add("Registro guardado exitosamente!", Severity.Success);
+    }
+
+    public void ValidateSave()
+    {
+        ValidateSaveSales = true;
+
+        if (string.IsNullOrEmpty(SportShopViewModel.ObjectsProducts.CodProduct) || string.IsNullOrEmpty(SportShopViewModel.ObjectsProducts.NameProduct) || string.IsNullOrEmpty(SportShopViewModel.ObjectsProducts.DescriptionProduct) || SportShopViewModel.ObjectsProducts.CostProduct == 0)
+        {
+            ValidateSaveSales = false;
+
+            Snackbar.Add("Señor usuario, Por favor diligenciar todos los campos.", Severity.Info);
+        }
+    }
+
+    /// <summary>
+    /// loading del boton
+    /// </summary>
+    /// <returns></returns>
+    async Task Processing(bool state)
+    {
+        _processing = state;
+        await Task.Delay(4);
+        StateHasChanged();
+
+    }
+
+    private async Task<TableData<Products>> ServerReload(TableState state)
+    {
+
+        await Processing(true);
+        tableLoading = true;
+        StateHasChanged();
+
+        await SportShopViewModel.GetProducts();
+
+        IEnumerable<Products> data = SportShopViewModel.ListProducts.Where(x => string.IsNullOrEmpty(searchString) || x.NameProduct.ToLower().Contains(searchString.ToLower()) || x.DescriptionProduct.ToLower().Contains(searchString.ToLower()) || x.CostProduct.ToString().Contains(searchString.ToString())).ToList();
+        tableLoading = false;
+        StateHasChanged();
+        totalItems = data.Count();
+
+        switch (state.SortLabel)
+        {
+            case "so_NameProduct":
+                data = data.OrderByDirection(state.SortDirection, o => o.NameProduct);
+                break;
+            case "cco_DescriptionSProduct":
+                data = data.OrderByDirection(state.SortDirection, o => o.DescriptionProduct);
+                break;
+            case "cco_QuantityProduct":
+                data = data.OrderByDirection(state.SortDirection, o => o.CostProduct);
+                break;
+        }
+
+        if (searchString == null || searchString.ToString().Length == 0)
+        {
+            pagedData = data.Skip(state.Page * state.PageSize).Take(state.PageSize).ToArray();
+        }
+        else
+        {
+            state.Page = 0;
+            pagedData = data.Skip(state.Page * state.PageSize).Take(state.PageSize).ToArray();
+        }
+
+        await Processing(false);
+        return new TableData<Products>() { TotalItems = totalItems, Items = pagedData };
+    }
+
+    /// <summary>
+    /// Asigna valor a texto para busqueda en la tabla
+    /// </summary>
+    /// <param name="text"></param>
+    private void OnSearch(string text)
+    {
+        searchString = text;
+        table.ReloadServerData();
+    }
+
+    /// <summary>
+    /// Elimina relacion de Centro de Costos por id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public async Task ButtonDeleteClicked(int id)
+    {
+        await Processing(true);
+
+        var resultDelete = await SportShopViewModel.DeleteProduct(id);
+
+        if (resultDelete > 0)
+        {
+            Snackbar.Add("Se ha borrado el registro!", Severity.Normal);
+            await table.ReloadServerData();
+            await Processing(false);
+            StateHasChanged();
+        }
+    }
+
+}

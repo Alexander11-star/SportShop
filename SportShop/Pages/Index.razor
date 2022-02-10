@@ -1,0 +1,73 @@
+﻿@using SportShop.Model.Common;
+
+@page "/"
+
+@if (viewModel.LoginAutorized)
+{
+    <MudItem xs="12" Class="justify-center pa-8">
+        <MudPaper Elevation="2" Style="border-color:dodgerblue">
+            <MudItem xs="12" Class="justify-center pa-4">
+                <MudText Align="Align.Center" Color="Color.Info">HOLA BIENVENIDO!!!</MudText>
+                <MudNavLink @onclick="@(e=> OnNavlinkClick("ViewProduct", "LISTADO DE PRODUCTOS"))" Disabled="@(viewModel.IdprofileAccess ==2)" Icon="@Icons.Filled.ChevronRight" IconColor="Color.Info">LISTADO DE PRODUCTOS</MudNavLink>
+                <MudNavLink @onclick="@(e=> OnNavlinkClick("ViewSales", "COMPRAR PRODUCTOS"))" Disabled="@(viewModel.IdprofileAccess ==1)" Icon="@Icons.Filled.ChevronRight" IconColor="Color.Info">COMPRAR PRODUCTOS</MudNavLink>
+            </MudItem>
+        </MudPaper>
+    </MudItem>
+}
+else
+{
+<MudItem xs="12" Class="justify-center pa-8">
+    <MudPaper Elevation="2" Style="border-color:dodgerblue">
+        <MudItem xs="12" Class="justify-center pa-4">
+            <MudText Align="Align.Center" Color="Color.Info">INICIAR SESION</MudText>
+            <MudText Align="Align.Center" Color="Color.Info" Class="mt-2"><MudIcon Icon="@Icons.Material.Filled.SupervisedUserCircle" Size="Size.Large" Title="Add" /></MudText>
+        </MudItem>
+        <MudGrid Class="justify-center">
+            <MudItem xs="7" sm="7" md="7">
+
+                <MudTextField @bind-Value="@viewModel.User" Label="* Usuario:" Variant="Variant.Outlined"></MudTextField>
+            </MudItem>
+            <MudItem xs="7" sm="7" md="7">
+                <MudTextField @bind-Value="@viewModel.Password" Label="Contraseña" Variant="Variant.Outlined" InputType="@PasswordInput" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick" />
+            </MudItem>
+        </MudGrid>
+        <MudGrid Class="justify-center mt-5">
+            <MudItem xs="7" sm="7" md="4">
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true" OnClick="@(s => ValidatonLogin())">LOGIN<MudIcon Icon="@Icons.Material.Filled.Login" Size="Size.Medium" Title="Add" /></MudButton>
+            </MudItem>
+        </MudGrid>
+        <MudGrid Class="justify-center mt-2">
+            <MudItem xs="7" sm="7" md="7">
+                <MudText Align="Align.Center" Color="Color.Info"></MudText>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+</MudItem>
+}
+
+
+@code {
+    public double? Amount { get; set; }
+    public int? Weight { get; set; }
+    public string Password { get; set; } = "superstrong123";
+
+    bool isShow;
+    InputType PasswordInput = InputType.Password;
+    string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+
+    void ButtonTestclick()
+    {
+        @if (isShow)
+        {
+            isShow = false;
+            PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+            PasswordInput = InputType.Password;
+        }
+        else
+        {
+            isShow = true;
+            PasswordInputIcon = Icons.Material.Filled.Visibility;
+            PasswordInput = InputType.Text;
+        }
+    }
+}
